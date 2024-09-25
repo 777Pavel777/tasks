@@ -59,6 +59,7 @@ form {
 }
 
 .task-title {
+  max-width: 250px;
   font-size: 0.9rem;
   color: #333;
 }
