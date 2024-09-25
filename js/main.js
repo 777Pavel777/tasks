@@ -12,7 +12,9 @@ if (localStorage.getItem('tasks')) {
 }
 
 checkEmptyList();
+toggleButtonState();
 
+taskInput.addEventListener('input', toggleButtonState);
 form.addEventListener('submit', addTask);
 tasksList.addEventListener('click', deleteTask);
 tasksList.addEventListener('click', doneTask);
@@ -21,6 +23,7 @@ function addTask(e) {
   e.preventDefault();
 
   const taskText = taskInput.value;
+
   const newTask = {
     id: Date.now(),
     text: taskText,
@@ -37,6 +40,8 @@ function addTask(e) {
   taskInput.value = '';
   taskInput.focus();
   checkEmptyList();
+
+  toggleButtonState();
 }
 
 function deleteTask(e) {
@@ -115,4 +120,9 @@ function renderTask(task) {
           </li>`;
 
   tasksList.insertAdjacentHTML('beforeend', taskHTML);
+}
+
+function toggleButtonState() {
+  const taskText = taskInput.value.trim();
+  btnAdd.disabled = taskText === '';
 }
