@@ -35,8 +35,15 @@ form {
 }
 
 .empty-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   text-align: center;
   color: #6c757d;
+}
+
+.empty-list img {
+  width: 128px;
 }
 
 .empty-list-title {
@@ -114,7 +121,7 @@ form {
 
 .btn-primary {
   width: 100px;
-  background-color: #007bff;
+  background-color: #a2a2a2;
   border: none;
   color: white;
   padding: 10px;
@@ -124,6 +131,6 @@ form {
   transition: background-color 0.3s ease-in-out;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
+.btn-enabled {
+  background-color: #007bff;
 }

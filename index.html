@@ -3,62 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasks</title>
+    <title>Draft</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <div class="container">
-      <!-- list item -->
-      <div class="card">
-        <ul id="tasksList" class="list-group list-group-flush">
-          <!-- <li id="emptyList" class="list-group-item empty-list">
-            <div class="empty-list-title">Список дел пуст</div>
-          </li> -->
-
-          <!-- <li class="list-group-item">
-            <span class="task-title">Купить молоко</span>
-            <div class="task-item-buttons">
-              <button type="button" data-action="done" class="btn-action">
-                <img src="./image/done.png" alt="Done" width="18" height="18" />
-              </button>
-              <button type="button" data-action="delete" class="btn-action">
-                <img
-                  src="./image/delete.png"
-                  alt="Delete"
-                  width="18"
-                  height="18"
-                />
-              </button>
-            </div>
-          </li> -->
-        </ul>
-      </div>
-      <!-- /list item -->
-
       <!-- form -->
       <form id="form">
-        <div class="card-header">Добавить новую задачу</div>
+        <div class="card-header">Add new task</div>
         <div class="form-group">
           <input
             type="text"
             class="form-control"
             id="taskInput"
-            placeholder="Введите задачу"
+            placeholder="Enter the task"
           />
-          <button id="btnAdd" type="submit" class="btn btn-primary">
-            Добавить
-          </button>
+          <button id="btnAdd" type="submit" class="btn btn-primary">Add</button>
         </div>
       </form>
+      <!-- /form -->
+
+      <!-- list item -->
+      <div class="card">
+        <ul id="tasksList" class="list-group list-group-flush"></ul>
+      </div>
+      <!-- /list item -->
     </div>
-    <!-- /form -->
 
     <script src="./js/main.js"></script>
   </body>
 </html>
-
-<!-- <script src="./test-1.js"></script>
-    <script src="./test-2.js"></script>
-    <script src="./test-3.js"></script>
-    <script src="./test-4.js"></script>
-    <script src="./tasks.js"></script> -->
